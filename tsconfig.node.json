@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    // tsBuildinfo 파일에 typescriopt는 컴파일 속도를 빠르게 하기 위해 이전 빌드 정보를 저장
+    // ci 환경 컴파일 캐시 유지 가능 (성능 최적화)
+    // tsc --watch 실시간 변경 시 속도 향상
+    "tsBuildInfoFile": "./.tsbuildInfo",
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["vite.config.ts"]
+}
